@@ -1,0 +1,8 @@
+# Flash Media - Universal Media Downloader
+#
+# Install with:  pip install -r requirements.txt
+# Also requires a system FFmpeg binary on your PATH.
+
+customtkinter>=5.2.0
+yt-dlp>=2024.0.0
+Pillow>=10.0.0

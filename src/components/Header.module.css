@@ -1,0 +1,53 @@
+.header {
+  text-align: center;
+  padding: calc(28px + var(--sat)) 24px 20px;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.bolt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  color: #022c22;
+  filter: drop-shadow(0 0 14px var(--accent-glow));
+  animation: pulse 2.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { filter: drop-shadow(0 0 14px var(--accent-glow)); }
+  50%      { filter: drop-shadow(0 0 26px rgba(14,165,233,0.45)); }
+}
+
+.name {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  background: linear-gradient(135deg, var(--accent-hover), var(--secondary-hover));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+@media (max-width: 520px) {
+  .header { padding-top: calc(20px + var(--sat)); }
+  .name { font-size: 22px; }
+  .bolt { width: 38px; height: 38px; }
+  .sub { font-size: 12px; }
+}

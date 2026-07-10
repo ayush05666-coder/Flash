@@ -1,0 +1,90 @@
+.wrap {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.wrapDone   { border-color: rgba(52,211,153,0.25); }
+.wrapFailed { border-color: rgba(248,113,113,0.25); }
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusText {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.iconDone { color: var(--success); }
+.iconFail { color: var(--error); }
+.iconSpin {
+  color: var(--accent);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.percent {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-hover);
+}
+
+.barTrack {
+  height: 8px;
+  background: var(--surface);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--secondary));
+  border-radius: 99px;
+  transition: width 0.35s ease;
+}
+
+.barPulse {
+  animation: pulse 1.2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
+}
+
+.barDone { background: var(--success); }
+.barFail { background: var(--error); }
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Flash Media — Universal Downloader",
+  "short_name": "Flash Media",
+  "description": "Download video and audio from thousands of sites — YouTube, Vimeo, TikTok, Twitter, Twitch, SoundCloud and more.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#10b981",
+  "background_color": "#0a0f0d",
+  "categories": ["media", "video", "download", "utilities"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    { "src": "/icon-192.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-512.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon-maskable.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Download", "url": "/?tab=download", "short_name": "Download" },
+    { "name": "History",  "url": "/?tab=history",  "short_name": "History" }
+  ]
+}
